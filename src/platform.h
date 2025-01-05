@@ -51,7 +51,8 @@
 #include "config.h"
 
 #if NETWORK_CONTROLLER == ETHERNET_CONTROLLER_W5X00
-#  include <Ethernet.h>
+//#  include <Ethernet.h>             //<<< comment out
+#include <EthernetWebServer.hpp>      //<<< add
 /** Specifies maximum number of clients connected to server. */
 constexpr uint8_t kMaxConnections{MAX_SOCK_NUM};
 #elif NETWORK_CONTROLLER == ETHERNET_CONTROLLER_ENC28J60
