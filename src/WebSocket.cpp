@@ -44,7 +44,7 @@ bool encodeSecKey(const char *key, char output[]) {
 
 /** @param[out] output Array of 4 elements (without NULL). */
 void generateMask(char output[]) {
-  randomSeed(analogRead(A0));
+  randomSeed(analogRead(0));
   for (byte i = 0; i < 4; ++i)
     output[i] = static_cast<char>(random(0xFF));
 }
